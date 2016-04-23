@@ -67,5 +67,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cardsArray = cardsDictionary["cards"] as! NSArray
         return cardsArray.count
     }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("CardCell", forIndexPath: indexPath)
+        
+        let suitDictionary = suitsArray[indexPath.section]
+        let cardsArray = suitDictionary["cards"] as! [Dictionary<String, AnyObject>]
+        let cardDictionary = cardsArray[indexPath.row]
+        
+        let cardImageName = cardDictionary["cardImage"] as! String
+        
+        if let cardImage = UIImage(named: cardImageName) {
+            
+            if let imageView = cell.contentView.viewWithTag(1000) as? UIImageView {
+                imageView.image = cardImage
+            }
+            
+        }
+    
+        return cell
+    }
 }
 
