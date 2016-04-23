@@ -68,6 +68,7 @@
 		CF68F9901CCBBAC400DC95A1 /* jack_of_spades.png in Resources */ = {isa = PBXBuildFile; fileRef = CF68F9581CCBBAC400DC95A1 /* jack_of_spades.png */; };
 		CF68F9911CCBBAC400DC95A1 /* king_of_spades.png in Resources */ = {isa = PBXBuildFile; fileRef = CF68F9591CCBBAC400DC95A1 /* king_of_spades.png */; };
 		CF68F9921CCBBAC400DC95A1 /* queen_of_spades.png in Resources */ = {isa = PBXBuildFile; fileRef = CF68F95A1CCBBAC400DC95A1 /* queen_of_spades.png */; };
+		CF68F9941CCBBE8000DC95A1 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF68F9931CCBBE8000DC95A1 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,7 @@
 		CF68F9581CCBBAC400DC95A1 /* jack_of_spades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jack_of_spades.png; sourceTree = "<group>"; };
 		CF68F9591CCBBAC400DC95A1 /* king_of_spades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king_of_spades.png; sourceTree = "<group>"; };
 		CF68F95A1CCBBAC400DC95A1 /* queen_of_spades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen_of_spades.png; sourceTree = "<group>"; };
+		CF68F9931CCBBE8000DC95A1 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				CF68F90B1CCBBA7500DC95A1 /* AppDelegate.swift */,
 				CF68F90D1CCBBA7500DC95A1 /* ViewController.swift */,
+				CF68F9931CCBBE8000DC95A1 /* CollectionViewCell.xib */,
 				CF68F90F1CCBBA7500DC95A1 /* Main.storyboard */,
 				CF68F9121CCBBA7500DC95A1 /* Assets.xcassets */,
 				CF68F9141CCBBA7500DC95A1 /* LaunchScreen.storyboard */,
@@ -352,6 +355,7 @@
 				CF68F9741CCBBAC400DC95A1 /* jack_of_diamonds.png in Resources */,
 				CF68F9801CCBBAC400DC95A1 /* ace_of_hearts.png in Resources */,
 				CF68F9891CCBBAC400DC95A1 /* 4_of_spades.png in Resources */,
+				CF68F9941CCBBE8000DC95A1 /* CollectionViewCell.xib in Resources */,
 				CF68F9721CCBBAC400DC95A1 /* 9_of_diamonds.png in Resources */,
 				CF68F95F1CCBBAC400DC95A1 /* 4_of_clubs.png in Resources */,
 				CF68F95D1CCBBAC400DC95A1 /* 2_of_clubs.png in Resources */,
