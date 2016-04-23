@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+    // MARK: - outlet
+    @IBOutlet var collectionView: UICollectionView!
     // MARK: - perporty
     var suitsArray = [Dictionary<String, AnyObject>]()
     
@@ -47,6 +48,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } catch {
             throw ParsingError.JsonParsingError
         }
+        // Configure collection view
+        configureCollectionView()
+    }
+    
+    // configure CollectionView
+    func configureCollectionView() {
+        collectionView.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCell")
     }
     
     // MARK: - UICollectionViewDataSource methods
