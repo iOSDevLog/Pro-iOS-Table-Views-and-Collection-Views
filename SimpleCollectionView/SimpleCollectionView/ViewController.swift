@@ -87,5 +87,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
         return cell
     }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: 165, height: 240)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(10, 10, 10, 10)
+    }
 }
 
