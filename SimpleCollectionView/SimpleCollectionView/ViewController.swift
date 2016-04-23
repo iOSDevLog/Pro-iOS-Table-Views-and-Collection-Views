@@ -22,6 +22,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Configure data
+        do {
+            try setupData()
+        } catch ParsingError.MissingJson {
+            print("Error loading JSON")
+        } catch ParsingError.JsonParsingError {
+            print("Error parsing JSON")
+        } catch {
+            print("Something went wrong")
+        }
     }
     
     // MARK: Data setup
