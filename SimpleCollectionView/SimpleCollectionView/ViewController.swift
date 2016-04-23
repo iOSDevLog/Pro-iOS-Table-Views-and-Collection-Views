@@ -48,5 +48,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             throw ParsingError.JsonParsingError
         }
     }
+    
+    // MARK: - UICollectionViewDataSource methods
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return suitsArray.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let cardsDictionary = self.suitsArray[section]
+        let cardsArray = cardsDictionary["cards"] as! NSArray
+        return cardsArray.count
+    }
 }
 
