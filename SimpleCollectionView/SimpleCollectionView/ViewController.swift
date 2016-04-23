@@ -9,17 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - perporty
+    var suitsArray = [Dictionary<String, AnyObject>]()
+    
+    enum ParsingError: ErrorType {
+        case MissingJson
+        case JsonParsingError
+    }
+    
+    // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: Data setup
+    func setupData () throws {
+        guard let filePath = NSBundle.mainBundle().pathForResource("cards", ofType: "json"), jsonData = NSData(contentsOfFile: filePath) else {
+            throw ParsingError.MissingJson
+        }
+        
+        do {
+            let parsedObject = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            suitsArray = parsedObject["suits"] as! Array
+        } catch {
+            throw ParsingError.JsonParsingError
+        }
     }
-
-
 }
 
